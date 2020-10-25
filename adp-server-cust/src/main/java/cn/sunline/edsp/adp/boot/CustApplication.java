@@ -1,7 +1,7 @@
 package cn.sunline.edsp.adp.boot;
 
 import cn.sunline.adp.boot.cedar.CedarMain;
-
+//qq
 public class CustApplication {
     public static void main(String[] args) {
         System.setProperty("ltts.vmid", "cust");
