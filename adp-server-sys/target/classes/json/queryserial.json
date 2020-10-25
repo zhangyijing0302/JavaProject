@@ -1,0 +1,12 @@
+{
+	"input":{
+		"cardno":"10000001"
+	},
+	"sys":{
+		"servicecode":"queryserial"
+	},
+	"comm_req":{
+		"busi_seq":"1",
+		"call_seq":"1"
+	}
+}

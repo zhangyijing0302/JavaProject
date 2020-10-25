@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="BasicType" package="cn.sunline.edsp.busi.type" longname="基础限制类型" classgen="normal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <restrictionType id="U_CUSTNA" longname="客户名" base="string" maxLength="100"/>
+    <restrictionType id="U_CUSTNO" longname="客户号" base="string" maxLength="100"/>
+    <restrictionType id="U_TELENO" longname="电话号" base="string" maxLength="100"/>
+    <restrictionType id="U_CARDNO" longname="卡号" base="string" maxLength="100"/>
+    <restrictionType id="U_ACCTNO" longname="账户号" base="string" maxLength="100"/>
+    <restrictionType id="U_ACCTAM" longname="账户余额" base="double" maxLength="20" fractionDigits="2"/>
+    <restrictionType id="U_TRANNAM" longname="交易金额" base="double" maxLength="20" fractionDigits="2"/>
+    <restrictionType id="U_BOSSNO" longname="法人" base="string" maxLength="30"/>
+    <restrictionType id="U_TRANNO" longname="交易流水号" base="string" maxLength="30"/>
+    <restrictionType id="U_ADDRESS" longname="住址" base="string" maxLength="200"/>
+    <restrictionType id="U_DATESTR" longname="字符串时间" base="dateString" maxLength="16"/>
+    <restrictionType id="U_DATETIME" longname="时间" base="dateTime"/>
+    <restrictionType id="U_ACCTQUOTA" longname="账户额度" base="double" maxLength="20" fractionDigits="2"/>
+    <restrictionType id="U_IDNO" longname="证件号" base="string" maxLength="50"/>
+</schema>

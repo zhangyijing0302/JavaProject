@@ -1,0 +1,1 @@
+[WARN ] [11:07:53,780][main][ ][ ][ ][ ][ ][cn.sunline.adp.metadata.mybatis.MyBatisSqlProcessor:470][当前执行sql的耗时[189]超过慢sql时间阀值[100],[FRWDB]SQL[KSysOnlTable.tsp_table_control.Entity.selectAll][null][0-10000]RowCount=0]

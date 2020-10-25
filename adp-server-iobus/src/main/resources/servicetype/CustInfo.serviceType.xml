@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<serviceType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="CustInfo" kind="business" longname="客户服务" package="cn.sunline.edsp.busi.servicetype" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <service id="createCust" name="createCust" longname="Create customer information">
+        <interface>
+            <input packMode="true">
+                <field id="custna" type="BasicType.U_CUSTNA" required="false" multi="false" array="false" longname="客户名称" ref="AtDict.Cust.custna"/>
+                <field id="teleno" type="BasicType.U_TELENO" required="false" multi="false" array="false" longname="客户电话" ref="AtDict.Cust.teleno"/>
+                <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+                <field id="address" type="BasicType.U_ADDRESS" required="false" multi="false" array="false" longname="住址" ref="AtDict.Acct.address"/>
+                <field id="certype" type="BasicEnumType.E_CERTYPE" required="false" multi="false" array="false" longname="证件类型" ref="AtDict.Acct.certype"/>
+                <field id="certno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="证件号" ref="AtDict.Acct.certno"/>
+                <field id="custno" type="BasicType.U_CUSTNO" required="false" multi="false" array="false" longname="Customer number" ref="AtDict.Cust.custno"/>
+            </input>
+            <output asParm="true" packMode="true">
+                <field id="custno" type="BasicType.U_CUSTNO" required="false" multi="false" array="false" longname="Customer number" ref="AtDict.Cust.custno"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+    <service id="queryCust" name="queryCust" longname="客户信息查询">
+        <interface>
+            <input packMode="true">
+                <field id="custno" type="BasicType.U_CUSTNO" required="false" multi="false" array="false" longname="Customer number" ref="AtDict.Cust.custno"/>
+            </input>
+            <output asParm="true" packMode="true">
+                <field id="cust" type="AtComplex.cusComplex" required="false" multi="false" array="false" longname="客户信息" ref="AtDict.Comm.cust"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+</serviceType>

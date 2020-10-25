@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flowtran xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="queryserial" longname="流水查询" kind="query" package="cn.sunline.edsp.busi.trans" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <description><![CDATA[Transaction level cache and global level cache demo]]></description>
+    <interface package="cn.sunline.edsp.busi.trans.intf">
+        <input packMode="true">
+            <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+        </input>
+        <output asParm="true" packMode="true">
+            <field id="cust" type="AtComplex.cusComplex" required="false" multi="false" array="false" longname="客户信息" ref="AtDict.Comm.cust"/>
+            <field id="serials" type="AtComplex.serialComplex" required="false" multi="true" array="false" longname="流水信息" ref="AtDict.Comm.serials"/>
+            <field id="card" type="AtComplex.cardComplex" required="false" multi="false" array="false" longname="卡信息" ref="AtDict.Comm.card"/>
+            <field id="acct" type="AtComplex.acctComplex" required="false" multi="false" array="false" longname="账户信息" ref="AtDict.Comm.acct"/>
+        </output>
+        <property packMode="true">
+            <field id="custno" type="BasicType.U_CUSTNO" required="false" multi="false" array="false" longname="Customer number" ref="AtDict.Cust.custno"/>
+        </property>
+        <printer packMode="true"/>
+    </interface>
+    <flow>
+        <method method="queryAcct" id="queryAcct" longname="查询账户信息"/>
+        <service mappingToProperty="false" serviceName="AcctInfo.queryComSerial" id="queryComSerial" longname="消费流水查询">
+            <in_mappings by_interface="true">
+                <mapping src="cardno" dest="cardno" by_interface="true" on_top="true"/>
+            </in_mappings>
+            <out_mappings by_interface="true">
+                <mapping src="serials" dest="serials" by_interface="true" on_top="true"/>
+            </out_mappings>
+        </service>
+        <service serviceName="CardInfo.queryCard" id="queryCard" longname="卡信息查询">
+            <in_mappings by_interface="true">
+                <mapping src="cardno" dest="cardno" by_interface="true" on_top="true"/>
+            </in_mappings>
+            <out_mappings by_interface="true">
+                <mapping src="card.acctst" dest="acct.acctst" by_interface="true" on_top="true"/>
+                <mapping src="card.acctst" dest="card.acctst" by_interface="true" on_top="true"/>
+                <mapping src="card.cardno" dest="card.cardno" by_interface="true" on_top="true"/>
+                <mapping src="card.opencartime" dest="card.opencartime" by_interface="true" on_top="true"/>
+                <mapping src="card.validtime" dest="card.validtime" by_interface="true" on_top="true"/>
+            </out_mappings>
+        </service>
+        <service serviceName="CustInfo.queryCust" id="queryCust" longname="客户信息查询">
+            <in_mappings by_interface="true">
+                <mapping src="custno" dest="custno" by_interface="true" on_top="true"/>
+            </in_mappings>
+            <out_mappings by_interface="true">
+                <mapping src="cust.custno" dest="acct.custno" by_interface="true" on_top="true"/>
+                <mapping src="cust.address" dest="cust.address" by_interface="true" on_top="true"/>
+                <mapping src="cust.certno" dest="cust.certno" by_interface="true" on_top="true"/>
+                <mapping src="cust.certype" dest="cust.certype" by_interface="true" on_top="true"/>
+                <mapping src="cust.custna" dest="cust.custna" by_interface="true" on_top="true"/>
+                <mapping src="cust.custno" dest="cust.custno" by_interface="true" on_top="true"/>
+                <mapping src="cust.teleno" dest="cust.teleno" by_interface="true" on_top="true"/>
+            </out_mappings>
+        </service>
+    </flow>
+    <outMapping/>
+    <propertyToPrinterMapping/>
+    <outToPrinterMapping/>
+</flowtran>

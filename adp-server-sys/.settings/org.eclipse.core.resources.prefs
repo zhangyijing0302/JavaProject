@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/main/resources/dict/AtDict.d_schema.xml=UTF-8
+encoding//src/main/resources/errors/AtErrorDef.error.xml=UTF-8
+encoding//src/main/resources/namedsql/AtNsql.nsql.xml=UTF-8
+encoding//src/main/resources/tables/AtTable.tables.xml=UTF-8
+encoding//src/main/resources/type/AtComplex.c_schema.xml=UTF-8
+encoding//src/main/resources/type/BasicEnumType.e_schema.xml=UTF-8
+encoding//src/main/resources/type/BasicType.u_schema.xml=UTF-8
+encoding//src/test/java=UTF-8
+encoding//src/test/resources=UTF-8
+encoding/<project>=UTF-8

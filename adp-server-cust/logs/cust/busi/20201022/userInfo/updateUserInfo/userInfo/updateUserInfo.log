@@ -1,0 +1,68 @@
+[DEBUG][14:46:54,496][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][com.alibaba.druid.filter.logging.Log4j2Filter:132][{conn-10004} pool-connect]
+[DEBUG][14:46:54,496][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.dao.datasource.conn.DefaultDBConnectionManager:300][DB-2[getConnection]]
+[DEBUG][14:46:54,497][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][com.alibaba.druid.filter.logging.Log4j2Filter:132][{conn-10004} setAutoCommit false]
+[WARN ][14:46:54,498][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.dao.datasource.conn.DefaultDBConnectionManager:393][当前连接已执行过beginTransaction，无需重复执行！ ]
+[DEBUG][14:46:54,498][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.handler.before.OETInitCacheHandler:34][beforeWorking set parameter version...]
+[DEBUG][14:46:54,498][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.handler.before.OETInitCacheHandler:44][（1）OETInitCacheHandler set parameter version：3]
+[DEBUG][14:46:54,498][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.handler.before.OETInitCacheHandler:74][（2）OETInitCacheHandler set parameter version：3]
+[INFO ][14:46:54,498][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.core.reloader.ConfigReloaderFactory:133][The current thread starts to bind configuration parameters]
+[DEBUG][14:46:54,499][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.handler.before.OETInitTimeoutHandler:31][timeout=[0]]
+[INFO ][14:46:54,500][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.handler.before.OETLogBeforeProcessHandler:44][
+-------------------------业务服务[UserInfo.updateUserInfo][null][123][113][]开始-------------------------]
+[INFO ][14:46:54,500][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.handler.before.OETLogBeforeProcessHandler:45][REQ[{output={}, input={userid=1, userName=锅锅, userAge=177351193111}, printer={}, comm_res={}, property={}, link_res={}, header={}, link_req={}, sys={servicecode=/userInfo/updateUserInfo, busiseqno=123, callseqno=113, profile={}}, comm_req={busi_seq=123, call_seq=113}}]]
+[DEBUG][14:46:54,520][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:68][公共运行变量赋值: RunEnvs{bossno=null, tranno=null, acctno=null}]
+[DEBUG][14:46:54,521][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:144][transaction data area: {output={}, input={userid=1, userName=锅锅, userAge=177351193111}, printer={}, comm_res={}, property={}, link_res={}, header={}, link_req={}, sys={servicecode=/userInfo/updateUserInfo, busiseqno=123, callseqno=113, profile={}}, comm_req={busi_seq=123, call_seq=113}}]
+[DEBUG][14:46:54,534][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:154][inintRunDataArea...]
+[DEBUG][14:46:54,539][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:163][交易转换后数据区Input{userid=1, userName=锅锅, userAge=177351193111}]
+[DEBUG][14:46:54,541][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:167][beforeProcess...]
+[DEBUG][14:46:54,541][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:129][beforeProcess 调用默认实现]
+[DEBUG][14:46:54,541][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:172][DA[Input]Input{userid=1, userName=锅锅, userAge=177351193111}]
+[DEBUG][14:46:54,547][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.service.model.JavaMethodServiceExecutor:81][SERVICE[UserInfo.updateUserInfo][updateUserInfo][input=Input{userid=1, userName=锅锅, userAge=177351193111}]]
+[DEBUG][14:46:54,551][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.base.engine.datamapping.InvokeProcUtil:58][调用过程: updateUserInfo([Input{userid=1, userName=锅锅, userAge=177351193111}, null, Output{}])]
+[DEBUG][14:46:54,568][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} created. update user_table set userName=?,userAge=? where userid=?]
+[SQL  ][14:46:54,569][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][net.sf.log4jdbc.Log4jSpyLogDelegator:241][3. update user_table set userName='锅锅',userAge='177351193111' where userid='1']
+[DEBUG][14:46:54,569][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} Parameters : [锅锅, 177351193111, 1]]
+[DEBUG][14:46:54,569][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} Types : [VARCHAR, VARCHAR, VARCHAR]]
+[DEBUG][14:46:54,571][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} executed. 1.3508 millis. update user_table set userName=?,userAge=? where userid=?]
+[DEBUG][14:46:54,571][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} clearParameters. ]
+[DEBUG][14:46:54,571][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][com.alibaba.druid.pool.PreparedStatementPool:129][{conn-10004, pstmt-20006} enter cache]
+[INFO ][14:46:54,574][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.metadata.mybatis.MyBatisSqlProcessor:227][[6][FRWDB]SQL[AtTable.user_table.Entity.updateByIndex_updeleteOne][user_table{userid=1, userName=锅锅, userAge=177351193111}]RowCount=1]
+[DEBUG][14:46:54,574][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.base.engine.datamapping.InvokeProcUtil$2:115][调用过程成功:updateUserInfo]
+[DEBUG][14:46:54,574][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.service.model.JavaMethodServiceExecutor:105][[27]SERVICE[UserInfo.updateUserInfo][updateUserInfo][true][output={}]]
+[DEBUG][14:46:54,576][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:180][afterProcess...]
+[DEBUG][14:46:54,576][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:137][afterProcess 调用默认实现]
+[DEBUG][14:46:54,577][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:185][[36]DA[Output]Output{}]
+[DEBUG][14:46:54,577][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:190][returnDataMapping...]
+[INFO ][14:46:54,579][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.handler.after.OETSetResponseHeadHandler:37][getTxnTempObjMap:{}]
+[DEBUG][14:46:54,579][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.handler.after.OETCommitTransactionHandler:28][processSuccess commitDB begin...]
+[DEBUG][14:46:54,579][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.dao.datasource.conn.DefaultDBConnectionManager:586][commit!!!]
+[DEBUG][14:46:54,615][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][com.alibaba.druid.filter.logging.Log4j2Filter:132][{conn-10004} commited]
+[INFO ][14:46:54,616][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.dao.datasource.transaction.impl.DefaultTransactionManager$1:93][DB-2[Commit][FRWDB]，DB累计耗时[6]]
+[INFO ][14:46:54,616][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.handler.last.OETDumpDebugInfoHandler:35][
+公共运行变量赋值
+	字段映射
+<交易开始>
+<交易输入接口数据映射>
+	字段映射
+		userid->userid=1
+		userName->userName=锅锅
+		userAge->userAge=177351193111
+<交易属性接口数据映射>
+	字段映射
+<交易输出接口数据映射>
+	字段映射
+字段映射
+	userid->userid=1
+	userName->userName=锅锅
+	userAge->userAge=177351193111
+字段映射
+<交易输出变量映射>
+	字段映射
+<交易结束>
+<公共响应变量输出至数据区>
+	字段映射
+]
+[DEBUG][14:46:54,617][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:153][beforePkgFormat 调用默认实现]
+[INFO ][14:46:54,617][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.handler.last.OETLogResponseHandler:31][RES[{sys={pckgsq=00000000, erortx=交易成功, erorcd=AAAAAAAAAA, status=S, maxsubtransno=}, comm_res={}, output={}, printer={}}]]
+[INFO ][14:46:54,617][http-nio-8082-exec-1][ ][ ][ ][/userInfo/updateUserInfo][cn.sunline.adp.cedar.engine.online.handler.last.OETLogResponseHandler:45][
+-------------------------业务服务[UserInfo.updateUserInfo][null][123][113][]结束-------------------------]

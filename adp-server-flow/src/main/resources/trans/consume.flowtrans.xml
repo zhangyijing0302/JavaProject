@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flowtran xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="consume" longname="刷卡消费" kind="query" package="cn.sunline.edsp.busi.trans" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <interface package="cn.sunline.edsp.busi.trans.intf">
+        <input packMode="true">
+            <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+            <field id="amount" type="BasicType.U_ACCTAM" required="false" multi="false" array="false" longname="消费金额" ref="AtDict.Acct.amount"/>
+            <field id="description" type="BasicType.U_STRING100" required="false" multi="false" array="false" longname="消费说明" ref="AtDict.Acct.description"/>
+        </input>
+        <output asParm="true" packMode="true">
+            <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+            <field id="description" type="BasicType.U_STRING100" required="false" multi="false" array="false" longname="消费说明" ref="AtDict.Acct.description"/>
+            <field id="tranno" type="BasicType.U_TRANNO" required="false" multi="false" array="false" longname="Trading serial number" ref="AtDict.Comm.tranno"/>
+            <field id="remain" type="BasicType.U_ACCTAM" required="false" multi="false" array="false" longname="账户余额" ref="AtDict.Acct.remain"/>
+            <field id="cumtime" type="BasicType.U_DATETIME" required="false" multi="false" array="false" longname="消费时间" ref="AtDict.Acct.cumtime"/>
+            <field id="accquota" type="BasicType.U_ACCTAM" required="false" multi="false" array="false" longname="账户额度" ref="AtDict.Acct.accquota"/>
+        </output>
+        <property packMode="true"/>
+        <printer packMode="true"/>
+    </interface>
+    <flow>
+        <service serviceName="CardInfo.checkCard" id="checkCard" longname="卡状态检查">
+            <in_mappings by_interface="true">
+                <mapping src="cardno" dest="cardno" by_interface="true" on_top="true"/>
+            </in_mappings>
+            <out_mappings by_interface="true"/>
+        </service>
+        <service mappingToProperty="false" serviceName="AcctInfo.consumeAcct" id="consumeAcct" longname="账户消费">
+            <in_mappings by_interface="true">
+                <mapping src="amount" dest="amount" by_interface="true" on_top="true"/>
+                <mapping src="cardno" dest="cardno" by_interface="true" on_top="true"/>
+                <mapping src="description" dest="description" by_interface="true" on_top="true"/>
+            </in_mappings>
+            <out_mappings by_interface="true">
+                <mapping src="accquota" dest="accquota" by_interface="true" on_top="true"/>
+                <mapping src="cardno" dest="cardno" by_interface="true" on_top="true"/>
+                <mapping src="description" dest="description" by_interface="true" on_top="true"/>
+                <mapping src="remain" dest="remain" by_interface="true" on_top="true"/>
+                <mapping src="tranno" dest="tranno" by_interface="true" on_top="true"/>
+            </out_mappings>
+        </service>
+    </flow>
+    <outMapping/>
+    <propertyToPrinterMapping/>
+    <outToPrinterMapping/>
+</flowtran>

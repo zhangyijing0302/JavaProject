@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<serviceType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="UserInfo" kind="business" longname="用户信息" package="cn.sunline.edsp.busi.adp.server.iobus.servicetype" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <service id="selectOneUserById" name="selectOneUserById" longname="根据ID查询用户信息">
+        <interface>
+            <input packMode="true">
+                <field id="userid" type="BasicType.U_USERID" required="false" multi="false" array="false" longname="userID" ref="AtDict.User.userid"/>
+            </input>
+            <output asParm="true" packMode="true">
+                <field id="userid" type="BasicType.U_USERID" required="false" multi="false" array="false" longname="userID" ref="AtDict.User.userid"/>
+                <field id="userName" type="BasicType.U_USERNAME" required="false" multi="false" array="false" longname="userName" ref="AtDict.User.userName"/>
+                <field id="userAge" type="BasicType.U_USERAGR" required="false" multi="false" array="false" longname="userAge" ref="AtDict.User.userAge"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+    <service id="deleteUserById" name="deleteUserById" longname="删除用户">
+        <interface>
+            <input packMode="true">
+                <field id="userid" type="BasicType.U_USERID" required="false" multi="false" array="false" longname="userID" ref="AtDict.User.userid"/>
+            </input>
+            <output asParm="true" packMode="true"/>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+    <service id="updateUserInfo" name="updateUserInfo" longname="更新用户信息">
+        <interface>
+            <input packMode="true">
+                <field id="userid" type="BasicType.U_USERID" required="false" multi="false" array="false" longname="userID" ref="AtDict.User.userid"/>
+                <field id="userName" type="BasicType.U_USERNAME" required="false" multi="false" array="false" longname="userName" ref="AtDict.User.userName"/>
+                <field id="userAge" type="BasicType.U_USERAGR" required="false" multi="false" array="false" longname="userAge" ref="AtDict.User.userAge"/>
+            </input>
+            <output asParm="true" packMode="true"/>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+    <service id="insertUserInfo" name="insertUserInfo" longname="添加用户">
+        <interface>
+            <input packMode="true">
+                <field id="userid" type="BasicType.U_USERID" required="false" multi="false" array="false" longname="userID" ref="AtDict.User.userid"/>
+                <field id="userName" type="BasicType.U_USERNAME" required="false" multi="false" array="false" longname="userName" ref="AtDict.User.userName"/>
+                <field id="userAge" type="BasicType.U_USERAGR" required="false" multi="false" array="false" longname="userAge" ref="AtDict.User.userAge"/>
+            </input>
+            <output asParm="true" packMode="true"/>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+</serviceType>

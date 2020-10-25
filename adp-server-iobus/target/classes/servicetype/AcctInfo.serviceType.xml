@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<serviceType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AcctInfo" kind="business" longname="账户服务" package="cn.sunline.edsp.busi.servicetype" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <service id="createAcct" name="createAcct" longname="Create account information">
+        <interface>
+            <input packMode="true">
+                <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+                <field id="acctno" type="BasicType.U_ACCTNO" required="false" multi="false" array="false" longname="Account number" ref="AtDict.Acct.acctno"/>
+                <field id="accquota" type="BasicType.U_ACCTAM" required="false" multi="false" array="false" longname="账户额度" ref="AtDict.Acct.accquota"/>
+                <field id="custno" type="BasicType.U_CUSTNO" required="false" multi="false" array="false" longname="Customer number" ref="AtDict.Cust.custno"/>
+            </input>
+            <output asParm="true" packMode="true">
+                <field id="acctno" type="BasicType.U_ACCTNO" required="false" multi="false" array="false" longname="Account number" ref="AtDict.Acct.acctno"/>
+                <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+                <field id="accquota" type="BasicType.U_ACCTAM" required="false" multi="false" array="false" longname="账户额度" ref="AtDict.Acct.accquota"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+    <service id="consumeAcct" name="consumeAcct" longname="账户消费">
+        <interface>
+            <input packMode="true">
+                <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+                <field id="amount" type="BasicType.U_ACCTAM" required="false" multi="false" array="false" longname="消费金额" ref="AtDict.Acct.amount"/>
+                <field id="description" type="BasicType.U_STRING100" required="false" multi="false" array="false" longname="消费说明" ref="AtDict.Acct.description"/>
+            </input>
+            <output asParm="true" packMode="true">
+                <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+                <field id="accquota" type="BasicType.U_ACCTAM" required="false" multi="false" array="false" longname="账户额度" ref="AtDict.Acct.accquota"/>
+                <field id="balance" type="BasicType.U_ACCTAM" required="false" multi="false" array="false" longname="账户余额" ref="AtDict.Acct.balance"/>
+                <field id="description" type="BasicType.U_STRING100" required="false" multi="false" array="false" longname="消费说明" ref="AtDict.Acct.description"/>
+                <field id="cumtime" type="BasicType.U_DATETIME" required="false" multi="false" array="false" longname="消费时间" ref="AtDict.Acct.cumtime"/>
+                <field id="remain" type="BasicType.U_ACCTAM" required="false" multi="false" array="false" longname="剩余额度" ref="AtDict.Acct.remain"/>
+                <field id="tranno" type="BasicType.U_TRANNO" required="false" multi="false" array="false" longname="Trading serial number" ref="AtDict.Comm.tranno"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+    <service id="queryAcct" name="queryAcct" longname="查询账户信息">
+        <interface>
+            <input packMode="true">
+                <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+            </input>
+            <output asParm="true" packMode="true">
+                <field id="acct" type="AtComplex.acctComplex" required="false" multi="false" array="false" longname="账户信息" ref="AtDict.Comm.acct"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+    <service id="queryComSerial" name="queryComSerial" longname="消费流水查询">
+        <interface>
+            <input packMode="true">
+                <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+            </input>
+            <output asParm="true" packMode="true">
+                <field id="serials" type="AtComplex.serialComplex" required="false" multi="true" array="false" longname="流水信息" ref="AtDict.Comm.serials"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+</serviceType>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AtComplex" package="cn.sunline.edsp.busi.type" longname="Composite type of account module" classgen="normal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <complexType id="acctComplex" longname="账户复合类型" dict="false" abstract="false" introduct="false">
+        <element id="acctno" longname="Account number" type="BasicType.U_ACCTNO" ref="AtDict.Acct.acctno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="acctst" longname="Account Status" type="BasicEnumType.E_ACCTST" ref="AtDict.Acct.acctst" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="accquota" longname="账户额度" type="BasicType.U_ACCTAM" ref="AtDict.Acct.accquota" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="balance" longname="账户余额" type="BasicType.U_ACCTAM" ref="AtDict.Acct.balance" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="remain" longname="剩余额度" type="BasicType.U_ACCTAM" ref="AtDict.Acct.remain" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="custno" longname="Customer number" type="BasicType.U_CUSTNO" ref="AtDict.Cust.custno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+    <complexType id="cusComplex" longname="客户复合类型" dict="false" abstract="false" introduct="false">
+        <element id="custno" longname="Customer number" type="BasicType.U_CUSTNO" ref="AtDict.Cust.custno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="custna" longname="Customer name" type="BasicType.U_CUSTNA" ref="AtDict.Cust.custna" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="teleno" longname="Telephone number" type="BasicType.U_TELENO" ref="AtDict.Cust.teleno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="address" longname="住址" type="BasicType.U_ADDRESS" ref="AtDict.Acct.address" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="certype" longname="证件类型" type="BasicEnumType.E_CERTYPE" ref="AtDict.Acct.certype" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="certno" longname="证件号" type="BasicType.U_CARDNO" ref="AtDict.Acct.certno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+    <complexType id="cardComplex" longname="卡信息复合类型" dict="false" abstract="false" introduct="false">
+        <element id="cardno" longname="Card number" type="BasicType.U_CARDNO" ref="AtDict.Acct.cardno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="acctst" longname="Account Status" type="BasicEnumType.E_ACCTST" ref="AtDict.Acct.acctst" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="opencartime" longname="开卡时间" type="BasicType.U_DATETIME" ref="AtDict.Acct.opencartime" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="validtime" longname="卡有效期" type="BasicType.U_DATETIME" ref="AtDict.Acct.validtime" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+    <complexType id="serialComplex" longname="流水符合类型" dict="false" abstract="false" introduct="false">
+        <element id="cardno" longname="Card number" type="BasicType.U_CARDNO" ref="AtDict.Acct.cardno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="tranno" longname="Trading serial number" type="BasicType.U_TRANNO" ref="AtDict.Comm.tranno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="accquota" longname="账户额度" type="BasicType.U_ACCTAM" ref="AtDict.Acct.accquota" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="balance" longname="账户余额" type="BasicType.U_ACCTAM" ref="AtDict.Acct.balance" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="amount" longname="消费金额" type="BasicType.U_ACCTAM" ref="AtDict.Acct.amount" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="description" longname="消费说明" type="BasicType.U_STRING100" ref="AtDict.Acct.description" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="remain" longname="剩余额度" type="BasicType.U_ACCTAM" ref="AtDict.Acct.remain" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="cumtime" longname="消费时间" type="BasicType.U_DATESTR" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+</schema>

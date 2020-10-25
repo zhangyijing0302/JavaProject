@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<errorConf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AtErrorDef" longname="Account module error code definition file" package="cn.sunline.edsp.busi.errors" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <errors id="AtError" longname="Account module error code definition file...">
+        <error id="E001" type="error" message="New customer failed!"/>
+        <error id="E002" type="error" message="New account failed!"/>
+        <error id="E003" type="error" message="卡号[%s]不存在！">
+            <parameter id="cardNo" type="BasicType.U_CARDNO"/>
+        </error>
+        <error id="E004" type="error" message="卡号[%s]状态不可用！">
+            <parameter id="cardno" type="BasicType.U_CARDNO"/>
+        </error>
+        <error id="E005" type="error" message="卡号[%s]超过当前有效期[%s]！">
+            <parameter id="cardno" type="BasicType.U_CARDNO"/>
+            <parameter id="validtime" type="BasicType.U_DATETIME"/>
+        </error>
+        <error id="E006" type="error" message="卡号[%s]对应的额度不足[%s]！">
+            <parameter id="cardno" type="BasicType.U_CARDNO"/>
+            <parameter id="remain" type="BasicType.U_ACCTAM"/>
+        </error>
+    </errors>
+</errorConf>

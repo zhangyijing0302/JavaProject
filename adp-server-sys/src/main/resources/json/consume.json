@@ -1,0 +1,14 @@
+{
+	"input":{
+		"cardno":"10000001",
+		"amount":100,
+		"description":"购物"
+	},
+	"sys":{
+		"servicecode":"consume"
+	},
+	"comm_req":{
+		"busi_seq":"1",
+		"call_seq":"1"
+	}
+}

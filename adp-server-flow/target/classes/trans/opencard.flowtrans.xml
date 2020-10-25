@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flowtran xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="opencard" longname="开卡交易" kind="create" package="cn.sunline.edsp.busi.trans" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <interface package="cn.sunline.edsp.busi.trans.intf">
+        <input packMode="true">
+            <field id="custna" type="BasicType.U_CUSTNA" required="false" multi="false" array="false" longname="Customer name" ref="AtDict.Cust.custna"/>
+            <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+            <field id="teleno" type="BasicType.U_TELENO" required="false" multi="false" array="false" longname="Telephone number" ref="AtDict.Cust.teleno"/>
+            <field id="custno" type="BasicType.U_CUSTNO" required="false" multi="false" array="false" longname="Customer number" ref="AtDict.Cust.custno"/>
+            <field id="address" type="BasicType.U_ADDRESS" required="false" multi="false" array="false" longname="住址" ref="AtDict.Acct.address"/>
+            <field id="certno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="证件号" ref="AtDict.Acct.certno"/>
+            <field id="certype" type="BasicEnumType.E_CERTYPE" required="false" multi="false" array="false" longname="证件类型" ref="AtDict.Acct.certype"/>
+        </input>
+        <output asParm="true" packMode="true">
+            <field id="custno" type="BasicType.U_CUSTNO" required="false" multi="false" array="false" longname="Customer number" ref="AtDict.Cust.custno"/>
+            <field id="acctno" type="BasicType.U_ACCTNO" required="false" multi="false" array="false" longname="Account number" ref="AtDict.Acct.acctno"/>
+            <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+            <field id="acctam" type="BasicType.U_ACCTAM" required="false" multi="false" array="false" longname="Account Balance" ref="AtDict.Acct.acctam"/>
+            <field id="acctst" type="BasicEnumType.E_ACCTST" required="false" multi="false" array="false" longname="Account Status" ref="AtDict.Acct.acctst"/>
+        </output>
+        <property packMode="true">
+            <field id="custno" type="BasicType.U_CUSTNO" required="false" multi="false" array="false" longname="Customer number" ref="AtDict.Cust.custno"/>
+        </property>
+        <printer packMode="true"/>
+    </interface>
+    <flow>
+        <method method="welcome" id="welcome" longname="Welcome to the ADP platform"/>
+        <service mappingToProperty="true" serviceName="CustInfo.createCust" id="createCust" longname="开客户">
+            <in_mappings by_interface="true">
+                <mapping src="address" dest="address" by_interface="true" on_top="true"/>
+                <mapping src="cardno" dest="cardno" by_interface="true" on_top="true"/>
+                <mapping src="certno" dest="certno" by_interface="true" on_top="true"/>
+                <mapping src="certype" dest="certype" by_interface="true" on_top="true"/>
+                <mapping src="custna" dest="custna" by_interface="true" on_top="true"/>
+                <mapping src="custno" dest="custno" by_interface="true" on_top="true"/>
+                <mapping src="teleno" dest="teleno" by_interface="true" on_top="true"/>
+            </in_mappings>
+            <out_mappings by_interface="true">
+                <mapping src="custno" dest="custno" by_interface="true" on_top="true"/>
+            </out_mappings>
+        </service>
+        <service mappingToProperty="false" serviceName="CardInfo.createCard" id="createCard" longname="开卡">
+            <in_mappings by_interface="true">
+                <mapping src="cardno" dest="cardno" by_interface="true" on_top="true"/>
+            </in_mappings>
+            <out_mappings by_interface="true">
+                <mapping src="acctst" dest="acctst" by_interface="true" on_top="true"/>
+                <mapping src="cardno" dest="cardno" by_interface="true" on_top="true"/>
+            </out_mappings>
+        </service>
+        <service serviceName="AcctInfo.createAcct" id="createAcct" longname="开账户">
+            <in_mappings by_interface="true">
+                <mapping src="cardno" dest="cardno" by_interface="true" on_top="true"/>
+                <mapping src="custno" dest="custno" by_interface="true" on_top="true"/>
+            </in_mappings>
+            <out_mappings by_interface="true">
+                <mapping src="acctno" dest="acctno" by_interface="true" on_top="true"/>
+                <mapping src="cardno" dest="cardno" by_interface="true" on_top="true"/>
+            </out_mappings>
+        </service>
+        <method method="drsRegister" id="drsRegister" longname="注册drs信息"/>
+    </flow>
+    <outMapping by_interface="false">
+        <mapping src="cardno" dest="cardno" by_interface="true" on_top="true"/>
+        <mapping src="custno" dest="custno" by_interface="true" on_top="true"/>
+    </outMapping>
+    <propertyToPrinterMapping/>
+    <outToPrinterMapping/>
+</flowtran>

@@ -1,0 +1,19 @@
+{
+	"input":{
+		"custna":"Kevin",
+		"cardno":"card:1000",
+		"teleno":"13800138000",
+		"custno":"cust:1000",
+		"tranam":0,
+		"address":"深圳湾一号",
+		"certno":"28282929202827",
+		"certype":"0"
+	},
+	"sys":{
+		"servicecode":"opencard"
+	},
+	"comm_req":{
+		"busi_seq":"1",
+		"call_seq":"1"
+	}
+}

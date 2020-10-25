@@ -1,0 +1,64 @@
+[DEBUG][14:09:04,277][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][com.alibaba.druid.filter.logging.Log4j2Filter:132][{conn-10004} pool-connect]
+[DEBUG][14:09:04,278][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.dao.datasource.conn.DefaultDBConnectionManager:300][DB-2[getConnection]]
+[DEBUG][14:09:04,278][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][com.alibaba.druid.filter.logging.Log4j2Filter:132][{conn-10004} setAutoCommit false]
+[WARN ][14:09:04,279][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.dao.datasource.conn.DefaultDBConnectionManager:393][当前连接已执行过beginTransaction，无需重复执行！ ]
+[DEBUG][14:09:04,279][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETInitCacheHandler:34][beforeWorking set parameter version...]
+[DEBUG][14:09:04,279][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETInitCacheHandler:44][（1）OETInitCacheHandler set parameter version：3]
+[DEBUG][14:09:04,279][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETInitCacheHandler:74][（2）OETInitCacheHandler set parameter version：3]
+[INFO ][14:09:04,279][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.core.reloader.ConfigReloaderFactory:133][The current thread starts to bind configuration parameters]
+[DEBUG][14:09:04,280][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETInitTimeoutHandler:31][timeout=[0]]
+[INFO ][14:09:04,280][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETLogBeforeProcessHandler:44][
+-------------------------业务服务[UserInfo.deleteUserById][null][123][113][]开始-------------------------]
+[INFO ][14:09:04,281][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETLogBeforeProcessHandler:45][REQ[{output={}, input={userid=1}, printer={}, comm_res={}, property={}, link_res={}, header={}, link_req={}, sys={servicecode=/userInfo/deleteUserById, busiseqno=123, callseqno=113, profile={}}, comm_req={busi_seq=123, call_seq=113}}]]
+[DEBUG][14:09:04,307][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:68][公共运行变量赋值: RunEnvs{bossno=null, tranno=null, acctno=null}]
+[DEBUG][14:09:04,308][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:144][transaction data area: {output={}, input={userid=1}, printer={}, comm_res={}, property={}, link_res={}, header={}, link_req={}, sys={servicecode=/userInfo/deleteUserById, busiseqno=123, callseqno=113, profile={}}, comm_req={busi_seq=123, call_seq=113}}]
+[DEBUG][14:09:04,320][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:154][inintRunDataArea...]
+[DEBUG][14:09:04,324][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:163][交易转换后数据区Input{userid=1}]
+[DEBUG][14:09:04,325][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:167][beforeProcess...]
+[DEBUG][14:09:04,325][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:129][beforeProcess 调用默认实现]
+[DEBUG][14:09:04,325][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:172][DA[Input]Input{userid=1}]
+[DEBUG][14:09:04,331][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.service.model.JavaMethodServiceExecutor:81][SERVICE[UserInfo.deleteUserById][deleteUserById][input=Input{userid=1}]]
+[DEBUG][14:09:04,336][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.base.engine.datamapping.InvokeProcUtil:58][调用过程: deleteUserById([Input{userid=1}, null, Output{}])]
+[DEBUG][14:09:04,340][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} created. delete from user_table where userid=?]
+[SQL  ][14:09:04,340][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][net.sf.log4jdbc.Log4jSpyLogDelegator:241][3. delete from user_table where userid='1']
+[DEBUG][14:09:04,341][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} Parameters : [1]]
+[DEBUG][14:09:04,341][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} Types : [VARCHAR]]
+[DEBUG][14:09:04,406][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} executed. 65.005 millis. delete from user_table where userid=?]
+[DEBUG][14:09:04,407][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} clearParameters. ]
+[DEBUG][14:09:04,407][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][com.alibaba.druid.pool.PreparedStatementPool:129][{conn-10004, pstmt-20006} enter cache]
+[INFO ][14:09:04,407][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.metadata.mybatis.MyBatisSqlProcessor:227][[69][FRWDB]SQL[AtTable.user_table.Entity.deleteByIndex_deleteOne][{userid=1}]RowCount=1]
+[DEBUG][14:09:04,407][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.base.engine.datamapping.InvokeProcUtil$2:115][调用过程成功:deleteUserById]
+[DEBUG][14:09:04,407][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.service.model.JavaMethodServiceExecutor:105][[76]SERVICE[UserInfo.deleteUserById][deleteUserById][true][output={}]]
+[DEBUG][14:09:04,409][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:180][afterProcess...]
+[DEBUG][14:09:04,409][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:137][afterProcess 调用默认实现]
+[DEBUG][14:09:04,409][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:185][[83]DA[Output]Output{}]
+[DEBUG][14:09:04,410][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:190][returnDataMapping...]
+[INFO ][14:09:04,412][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.handler.after.OETSetResponseHeadHandler:37][getTxnTempObjMap:{}]
+[DEBUG][14:09:04,412][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.handler.after.OETCommitTransactionHandler:28][processSuccess commitDB begin...]
+[DEBUG][14:09:04,413][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.dao.datasource.conn.DefaultDBConnectionManager:586][commit!!!]
+[DEBUG][14:09:04,434][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][com.alibaba.druid.filter.logging.Log4j2Filter:132][{conn-10004} commited]
+[INFO ][14:09:04,435][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.dao.datasource.transaction.impl.DefaultTransactionManager$1:93][DB-2[Commit][FRWDB]，DB累计耗时[69]]
+[INFO ][14:09:04,435][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.handler.last.OETDumpDebugInfoHandler:35][
+公共运行变量赋值
+	字段映射
+<交易开始>
+<交易输入接口数据映射>
+	字段映射
+		userid->userid=1
+<交易属性接口数据映射>
+	字段映射
+<交易输出接口数据映射>
+	字段映射
+字段映射
+	userid->userid=1
+字段映射
+<交易输出变量映射>
+	字段映射
+<交易结束>
+<公共响应变量输出至数据区>
+	字段映射
+]
+[DEBUG][14:09:04,436][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:153][beforePkgFormat 调用默认实现]
+[INFO ][14:09:04,436][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.handler.last.OETLogResponseHandler:31][RES[{sys={pckgsq=00000000, erortx=交易成功, erorcd=AAAAAAAAAA, status=S, maxsubtransno=}, comm_res={}, output={}, printer={}}]]
+[INFO ][14:09:04,436][http-nio-8082-exec-1][ ][ ][ ][/userInfo/deleteUserById][cn.sunline.adp.cedar.engine.online.handler.last.OETLogResponseHandler:45][
+-------------------------业务服务[UserInfo.deleteUserById][null][123][113][]结束-------------------------]

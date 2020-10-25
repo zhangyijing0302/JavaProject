@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<serviceType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="CardInfo" kind="business" longname="卡信息服务" package="cn.sunline.edsp.busi.servicetype" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <service id="createCard" name="createCard" longname="开卡">
+        <interface>
+            <input packMode="true">
+                <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="卡号" ref="AtDict.Acct.cardno"/>
+            </input>
+            <output asParm="true" packMode="true">
+                <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+                <field id="opencartime" type="BasicType.U_DATETIME" required="false" multi="false" array="false" longname="开卡时间" ref="AtDict.Acct.opencartime"/>
+                <field id="acctst" type="BasicEnumType.E_ACCTST" required="false" multi="false" array="false" longname="Account Status" ref="AtDict.Acct.acctst"/>
+                <field id="validtime" type="BasicType.U_DATETIME" required="false" multi="false" array="false" longname="卡有效期" ref="AtDict.Acct.validtime"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+    <service id="checkCard" name="checkCard" longname="卡状态检查">
+        <interface>
+            <input packMode="true">
+                <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+            </input>
+            <output asParm="true" packMode="true"/>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+    <service id="queryCard" name="queryCard" longname="卡信息查询">
+        <interface>
+            <input packMode="true">
+                <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+            </input>
+            <output asParm="true" packMode="true">
+                <field id="card" type="AtComplex.cardComplex" required="false" multi="false" array="false" longname="卡信息" ref="AtDict.Comm.card"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+</serviceType>

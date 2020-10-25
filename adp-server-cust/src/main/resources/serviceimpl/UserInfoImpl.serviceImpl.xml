@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<serviceImpl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="UserInfoImpl" longname="用户信息实现" serviceType="UserInfo" package="cn.sunline.edsp.busi.adp.server.cust.serviceimpl" xsi:noNamespaceSchemaLocation="ltts-model.xsd"/>

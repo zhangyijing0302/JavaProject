@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sqls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AtNsql" longname="Account module named sql" package="cn.sunline.edsp.busi.namedsql" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <insert id="insertUser" longname="添加用户">
+        <sql type="mysql" desc="添加新用户"><![CDATA[
+    	insert 
+    	into
+    	    	user_table
+    	    	(userId,userName,userAge) 
+    	values
+    	    	(#userid#,#userName#,#userAge#)
+    	]]></sql>
+        <parameterMap class="AtTable.user_table"/>
+    </insert>
+</sqls>

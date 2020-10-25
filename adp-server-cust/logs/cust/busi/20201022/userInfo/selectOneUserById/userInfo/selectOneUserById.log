@@ -1,0 +1,222 @@
+[DEBUG][13:34:15,053][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:132][{conn-10004} pool-connect]
+[DEBUG][13:34:15,053][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.dao.datasource.conn.DefaultDBConnectionManager:300][DB-2[getConnection]]
+[DEBUG][13:34:15,054][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:132][{conn-10004} setAutoCommit false]
+[WARN ][13:34:15,056][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.dao.datasource.conn.DefaultDBConnectionManager:393][当前连接已执行过beginTransaction，无需重复执行！ ]
+[DEBUG][13:34:15,056][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETInitCacheHandler:34][beforeWorking set parameter version...]
+[DEBUG][13:34:15,056][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETInitCacheHandler:44][（1）OETInitCacheHandler set parameter version：3]
+[DEBUG][13:34:15,056][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETInitCacheHandler:74][（2）OETInitCacheHandler set parameter version：3]
+[INFO ][13:34:15,056][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.core.reloader.ConfigReloaderFactory:133][The current thread starts to bind configuration parameters]
+[DEBUG][13:34:15,058][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETInitTimeoutHandler:31][timeout=[0]]
+[INFO ][13:34:15,058][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETLogBeforeProcessHandler:44][
+-------------------------业务服务[UserInfo.selectOneUserById][null][123][113][]开始-------------------------]
+[INFO ][13:34:15,059][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETLogBeforeProcessHandler:45][REQ[{output={}, input={id=1}, printer={}, comm_res={}, property={}, link_res={}, header={}, link_req={}, sys={servicecode=/userInfo/selectOneUserById, busiseqno=123, callseqno=113, profile={}}, comm_req={busi_seq=123, call_seq=113}}]]
+[DEBUG][13:34:15,094][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:68][公共运行变量赋值: RunEnvs{bossno=null, tranno=null, acctno=null}]
+[DEBUG][13:34:15,096][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:144][transaction data area: {output={}, input={id=1}, printer={}, comm_res={}, property={}, link_res={}, header={}, link_req={}, sys={servicecode=/userInfo/selectOneUserById, busiseqno=123, callseqno=113, profile={}}, comm_req={busi_seq=123, call_seq=113}}]
+[DEBUG][13:34:15,110][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:154][inintRunDataArea...]
+[DEBUG][13:34:15,115][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:163][交易转换后数据区Input{userid=null}]
+[DEBUG][13:34:15,116][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:167][beforeProcess...]
+[DEBUG][13:34:15,116][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:129][beforeProcess 调用默认实现]
+[DEBUG][13:34:15,116][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:172][DA[Input]Input{userid=null}]
+[DEBUG][13:34:15,124][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.service.model.JavaMethodServiceExecutor:81][SERVICE[UserInfo.selectOneUserById][selectOneUserById][input=Input{userid=null}]]
+[DEBUG][13:34:15,128][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.base.engine.datamapping.InvokeProcUtil:58][调用过程: selectOneUserById([Input{userid=null}, null, Output{}])]
+[DEBUG][13:34:15,133][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} created. select userid, userName, userAge from user_table where userid=?]
+[SQL  ][13:34:15,134][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][net.sf.log4jdbc.Log4jSpyLogDelegator:241][3. select userid, userName, userAge from user_table where userid=NULL]
+[DEBUG][13:34:15,134][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} Parameters : [NULL]]
+[DEBUG][13:34:15,135][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} Types : [NULL]]
+[DEBUG][13:34:15,158][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} executed. 23.7871 millis. select userid, userName, userAge from user_table where userid=?]
+[DEBUG][13:34:15,159][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:142][{conn-10004, pstmt-20006, rs-50006} open]
+[DEBUG][13:34:15,159][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:142][{conn-10004, pstmt-20006, rs-50006} Header: [userId, userName, userAge]]
+[DEBUG][13:34:15,159][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:142][{conn-10004, pstmt-20006, rs-50006} closed]
+[DEBUG][13:34:15,160][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} clearParameters. ]
+[DEBUG][13:34:15,160][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.pool.PreparedStatementPool:129][{conn-10004, pstmt-20006} enter cache]
+[INFO ][13:34:15,160][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.metadata.mybatis.MyBatisSqlProcessor:464][[29][FRWDB]SQL[AtTable.user_table.Entity.selectByIndex_selectOne][{userid=null}][0-10000]RowCount=0]
+[ERROR][13:34:15,160][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.base.engine.datamapping.InvokeProcUtil$2:128][调用过程失败:class cn.sunline.edsp.busi.adp.server.cust.serviceimpl.UserInfoImpl.selectOneUserById ',Cause:null']
+[DEBUG][13:34:15,163][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.service.model.JavaMethodServiceExecutor:105][[38]SERVICE[UserInfo.selectOneUserById][selectOneUserById][false][output=null]]
+[DEBUG][13:34:15,163][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:145][exceptionProcess 调用默认空实现]
+[ERROR][13:34:15,165][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:107][[null] 处理请求失败 ]
+java.lang.NullPointerException: null
+	at cn.sunline.edsp.busi.adp.server.cust.serviceimpl.UserInfoImpl.selectOneUserById(UserInfoImpl.java:26) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_191]
+	at cn.sunline.adp.cedar.base.engine.datamapping.InvokeProcUtil$2.execute(InvokeProcUtil.java:113) ~[adp-cedar-base-4.1.1-zxbank-M7.9.jar:4.1.1-zxbank-M7.9]
+	at cn.sunline.adp.core.profile.ProfileUtil.doProfile(ProfileUtil.java:97) ~[adp-core-4.1.1-zxbank-M7.9.jar:4.1.1-zxbank-M7.9]
+	at cn.sunline.adp.cedar.base.engine.datamapping.InvokeProcUtil.invokeMethod(InvokeProcUtil.java:110) ~[adp-cedar-base-4.1.1-zxbank-M7.9.jar:4.1.1-zxbank-M7.9]
+	at cn.sunline.adp.cedar.base.engine.datamapping.InvokeProcUtil.callProfile(InvokeProcUtil.java:59) ~[adp-cedar-base-4.1.1-zxbank-M7.9.jar:4.1.1-zxbank-M7.9]
+	at cn.sunline.adp.cedar.service.model.JavaMethodServiceExecutor.execute(JavaMethodServiceExecutor.java:92) ~[adp-service-core-4.1.1-zxbank-M7.9.jar:4.1.1-zxbank-M7.9]
+	at cn.sunline.adp.cedar.service.model.service.JavaMethodServiceImplementation.execute(JavaMethodServiceImplementation.java:83) ~[adp-service-core-4.1.1-zxbank-M7.9.jar:4.1.1-zxbank-M7.9]
+	at cn.sunline.adp.cedar.engine.online.service.ServiceOnlineEngine._process(ServiceOnlineEngine.java:72) ~[adp-cedar-engine-online-4.1.1-zxbank-M7.9.jar:4.1.1-zxbank-M7.9]
+	at cn.sunline.adp.cedar.engine.online.service.ServiceOnlineEngine.process(ServiceOnlineEngine.java:60) ~[adp-cedar-engine-online-4.1.1-zxbank-M7.9.jar:4.1.1-zxbank-M7.9]
+	at cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate.process(OnlineEngineTemplate.java:176) ~[adp-cedar-engine-online-4.1.1-zxbank-M7.9.jar:4.1.1-zxbank-M7.9]
+	at cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate.process(OnlineEngineTemplate.java:98) ~[adp-cedar-engine-online-4.1.1-zxbank-M7.9.jar:4.1.1-zxbank-M7.9]
+	at cn.sunline.adp.cedar.server.online.server.OnlineAccessServiceFacade.execute(OnlineAccessServiceFacade.java:192) ~[adp-cedar-server-online-4.1.1-zxbank-M7.9.jar:4.1.1-zxbank-M7.9]
+	at cn.sunline.adp.cedar.protocol.rest.access.handler.RestServiceExecutor.execute(RestServiceExecutor.java:35) ~[adp-transport-rest-4.1.1-zxbank-M7.9.jar:4.1.1-zxbank-M7.9]
+	at cn.sunline.adp.cedar.protocol.rest.util.RestUtils.execute(RestUtils.java:23) ~[adp-transport-rest-4.1.1-zxbank-M7.9.jar:4.1.1-zxbank-M7.9]
+	at cn.sunline.edsp.busi.adp.server.iobus.servicetype.UserInfoController.selectOneUserById(UserInfoController.java:21) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_191]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665) ~[javax.servlet-api-4.0.1.jar:4.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750) ~[javax.servlet-api-4.0.1.jar:4.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88) ~[spring-boot-actuator-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:114) ~[spring-boot-actuator-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:104) ~[spring-boot-actuator-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.26.jar:9.0.26]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_191]
+[DEBUG][13:34:15,169][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:132][{conn 10004} rollback]
+[DEBUG][13:34:15,170][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.dao.datasource.transaction.impl.DefaultTransactionManager$2:148][DB-2[Rollback][FRWDB]，DB累计耗时[29]]
+[INFO ][13:34:15,170][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.last.OETDumpDebugInfoHandler:35][
+公共运行变量赋值
+	字段映射
+<交易开始>
+<交易输入接口数据映射>
+	字段映射
+		userid->userid=null
+<交易属性接口数据映射>
+	字段映射
+<交易输出接口数据映射>
+	字段映射
+		userid->userid=null
+		userName->userName=null
+		userAge->userAge=null
+字段映射
+	userid->userid=null
+<交易结束>
+<公共响应变量输出至数据区>
+	字段映射
+]
+[DEBUG][13:34:15,170][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:153][beforePkgFormat 调用默认实现]
+[INFO ][13:34:15,170][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.last.OETLogResponseHandler:31][RES[{sys={pckgsq=00000000, erortx=系统错误, erorcd=9999999999, status=F, maxsubtransno=}, comm_res={}, output={}, printer={}}]]
+[INFO ][13:34:15,171][http-nio-8082-exec-1][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.last.OETLogResponseHandler:45][
+-------------------------业务服务[UserInfo.selectOneUserById][null][123][113][]结束-------------------------]
+[DEBUG][13:45:20,078][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:132][{conn-10004} pool-connect]
+[DEBUG][13:45:20,078][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.dao.datasource.conn.DefaultDBConnectionManager:300][DB-2[getConnection]]
+[DEBUG][13:45:20,079][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:132][{conn-10004} setAutoCommit false]
+[WARN ][13:45:20,081][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.dao.datasource.conn.DefaultDBConnectionManager:393][当前连接已执行过beginTransaction，无需重复执行！ ]
+[DEBUG][13:45:20,081][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETInitCacheHandler:34][beforeWorking set parameter version...]
+[DEBUG][13:45:20,082][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETInitCacheHandler:44][（1）OETInitCacheHandler set parameter version：3]
+[DEBUG][13:45:20,082][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETInitCacheHandler:74][（2）OETInitCacheHandler set parameter version：3]
+[INFO ][13:45:20,082][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.core.reloader.ConfigReloaderFactory:133][The current thread starts to bind configuration parameters]
+[DEBUG][13:45:20,083][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETInitTimeoutHandler:31][timeout=[0]]
+[INFO ][13:45:20,083][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETLogBeforeProcessHandler:44][
+-------------------------业务服务[UserInfo.selectOneUserById][null][123][113][]开始-------------------------]
+[INFO ][13:45:20,083][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.before.OETLogBeforeProcessHandler:45][REQ[{output={}, input={userid=1}, printer={}, comm_res={}, property={}, link_res={}, header={}, link_req={}, sys={servicecode=/userInfo/selectOneUserById, busiseqno=123, callseqno=113, profile={}}, comm_req={busi_seq=123, call_seq=113}}]]
+[DEBUG][13:45:20,107][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:68][公共运行变量赋值: RunEnvs{bossno=null, tranno=null, acctno=null}]
+[DEBUG][13:45:20,109][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:144][transaction data area: {output={}, input={userid=1}, printer={}, comm_res={}, property={}, link_res={}, header={}, link_req={}, sys={servicecode=/userInfo/selectOneUserById, busiseqno=123, callseqno=113, profile={}}, comm_req={busi_seq=123, call_seq=113}}]
+[DEBUG][13:45:20,120][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:154][inintRunDataArea...]
+[DEBUG][13:45:20,125][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:163][交易转换后数据区Input{userid=1}]
+[DEBUG][13:45:20,126][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:167][beforeProcess...]
+[DEBUG][13:45:20,126][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:129][beforeProcess 调用默认实现]
+[DEBUG][13:45:20,126][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:172][DA[Input]Input{userid=1}]
+[DEBUG][13:45:20,131][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.service.model.JavaMethodServiceExecutor:81][SERVICE[UserInfo.selectOneUserById][selectOneUserById][input=Input{userid=1}]]
+[DEBUG][13:45:20,135][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.base.engine.datamapping.InvokeProcUtil:58][调用过程: selectOneUserById([Input{userid=1}, null, Output{}])]
+[DEBUG][13:45:20,142][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} created. select userid, userName, userAge from user_table where userid=?]
+[SQL  ][13:45:20,142][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][net.sf.log4jdbc.Log4jSpyLogDelegator:241][3. select userid, userName, userAge from user_table where userid='1']
+[DEBUG][13:45:20,142][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} Parameters : [1]]
+[DEBUG][13:45:20,143][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} Types : [VARCHAR]]
+[DEBUG][13:45:20,167][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} executed. 25.5553 millis. select userid, userName, userAge from user_table where userid=?]
+[DEBUG][13:45:20,167][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:142][{conn-10004, pstmt-20006, rs-50006} open]
+[DEBUG][13:45:20,168][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:142][{conn-10004, pstmt-20006, rs-50006} Header: [userId, userName, userAge]]
+[DEBUG][13:45:20,169][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:142][{conn-10004, pstmt-20006, rs-50006} Result: [1, 张三, 12]]
+[DEBUG][13:45:20,175][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:142][{conn-10004, pstmt-20006, rs-50006} closed]
+[DEBUG][13:45:20,175][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:137][{conn-10004, pstmt-20006} clearParameters. ]
+[DEBUG][13:45:20,176][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.pool.PreparedStatementPool:129][{conn-10004, pstmt-20006} enter cache]
+[INFO ][13:45:20,176][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.metadata.mybatis.MyBatisSqlProcessor:464][[36][FRWDB]SQL[AtTable.user_table.Entity.selectByIndex_selectOne][{userid=1}][0-10000]RowCount=1]
+[DEBUG][13:45:20,176][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.base.engine.datamapping.InvokeProcUtil$2:115][调用过程成功:selectOneUserById]
+[DEBUG][13:45:20,176][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.service.model.JavaMethodServiceExecutor:105][[44]SERVICE[UserInfo.selectOneUserById][selectOneUserById][true][output=Output{userid=1, userName=张三, userAge=12}]]
+[DEBUG][13:45:20,178][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:180][afterProcess...]
+[DEBUG][13:45:20,178][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:137][afterProcess 调用默认实现]
+[DEBUG][13:45:20,178][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:185][[52]DA[Output]Output{userid=1, userName=张三, userAge=12}]
+[DEBUG][13:45:20,178][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.OnlineEngineTemplate:190][returnDataMapping...]
+[INFO ][13:45:20,181][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.after.OETSetResponseHeadHandler:37][getTxnTempObjMap:{}]
+[DEBUG][13:45:20,182][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.after.OETCommitTransactionHandler:28][processSuccess commitDB begin...]
+[DEBUG][13:45:20,182][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.dao.datasource.conn.DefaultDBConnectionManager:586][commit!!!]
+[DEBUG][13:45:20,182][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][com.alibaba.druid.filter.logging.Log4j2Filter:132][{conn-10004} commited]
+[INFO ][13:45:20,183][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.dao.datasource.transaction.impl.DefaultTransactionManager$1:93][DB-2[Commit][FRWDB]，DB累计耗时[36]]
+[INFO ][13:45:20,184][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.last.OETDumpDebugInfoHandler:35][
+公共运行变量赋值
+	字段映射
+<交易开始>
+<交易输入接口数据映射>
+	字段映射
+		userid->userid=1
+<交易属性接口数据映射>
+	字段映射
+<交易输出接口数据映射>
+	字段映射
+		userid->userid=null
+		userName->userName=null
+		userAge->userAge=null
+字段映射
+	userid->userid=1
+字段映射
+	userid->userid=1
+	userName->userName=张三
+	userAge->userAge=12
+<交易输出变量映射>
+	字段映射
+		userid->userid=1
+		userName->userName=张三
+		userAge->userAge=12
+<交易结束>
+<公共响应变量输出至数据区>
+	字段映射
+]
+[DEBUG][13:45:20,184][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.spi.impl.DefaultOnlineEngineExtensionPoint:153][beforePkgFormat 调用默认实现]
+[INFO ][13:45:20,184][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.last.OETLogResponseHandler:31][RES[{sys={pckgsq=00000000, erortx=交易成功, erorcd=AAAAAAAAAA, status=S, maxsubtransno=}, comm_res={}, output={userid=1, userName=张三, userAge=12}, printer={}}]]
+[INFO ][13:45:20,184][http-nio-8082-exec-3][ ][ ][ ][/userInfo/selectOneUserById][cn.sunline.adp.cedar.engine.online.handler.last.OETLogResponseHandler:45][
+-------------------------业务服务[UserInfo.selectOneUserById][null][123][113][]结束-------------------------]

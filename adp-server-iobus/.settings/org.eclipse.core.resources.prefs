@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//resources/dict/AtDict.d_schema.xml=UTF-8
+encoding//resources/tables/AtTable.tables.xml=UTF-8
+encoding//resources/type/AtComplex.c_schema.xml=UTF-8
+encoding//resources/type/BasicEnumType.e_schema.xml=UTF-8
+encoding//resources/type/BasicType.u_schema.xml=UTF-8
+encoding//src/main/java=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/main/resources/servicetype/AcctInfo.serviceType.xml=UTF-8
+encoding//src/main/resources/servicetype/CardInfo.serviceType.xml=UTF-8
+encoding//src/main/resources/servicetype/CustInfo.serviceType.xml=UTF-8
+encoding//src/test/java=UTF-8
+encoding//src/test/resources=UTF-8
+encoding/<project>=UTF-8
+encoding/resources=UTF-8
